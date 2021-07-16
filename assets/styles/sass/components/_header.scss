@@ -1,0 +1,104 @@
+.header {
+  margin: 30px auto;
+  padding: 0 20px;
+
+  display: grid;
+  grid-template-columns: minmax(160px, auto) minmax(auto, 600px) minmax(
+      280px,
+      auto
+    );
+  gap: 40px;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+    gap: 20px;
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+.busca {
+  form {
+    display: grid;
+  }
+
+  #s {
+    border: 2px solid var(--color-black);
+    border-radius: 4px;
+
+    font-size: 1.125rem;
+    padding: 12px 45px 12px 20px;
+    grid-area: 1/1;
+
+    &:focus {
+      outline: 0;
+      box-shadow: 2px 2px 6px 1px rgba(3, 3, 3, 0.18);
+    }
+  }
+
+  #searchbutton {
+    grid-area: 1/1;
+    justify-self: end;
+    text-indent: -100px;
+
+    border: none;
+    width: 50px;
+    cursor: pointer;
+
+    background: transparent url('../../img/icons/search.svg') no-repeat center
+      center;
+  }
+}
+
+.conta {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: auto auto;
+
+  @media (max-width: 800px) {
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .minha-conta,
+  .carrinho {
+    padding: 5px 0 5px 34px;
+    background-repeat: no-repeat;
+    background-position: center left;
+  }
+
+  .minha-conta {
+    background-image: url('../../img/icons/user.svg');
+  }
+
+  .carrinho {
+    background-image: url('../../img/icons/cart.svg');
+    position: relative;
+
+    &-count {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      position: absolute;
+      top: -2px;
+      left: 12px;
+
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
+
+      font-size: 0.7rem;
+      font-weight: 700;
+
+      background-color: orangered;
+      color: var(--color-white);
+    }
+  }
+}
