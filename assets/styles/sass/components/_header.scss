@@ -102,3 +102,41 @@
     }
   }
 }
+
+.menu-categorias {
+  background-color: var(--color-black);
+  padding: 5px;
+
+  @media (max-width: 800px) {
+    position: relative;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+
+  ul {
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: 800px) {
+      justify-content: initial;
+    }
+  }
+
+  li {
+    margin: 15px 10px;
+
+    &.current-menu-item a {
+      color: orangered;
+    }
+  }
+
+  a {
+    color: var(--color-white);
+    padding: 10px;
+
+    &:hover {
+      color: orangered;
+    }
+  }
+}
