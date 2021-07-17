@@ -14,13 +14,14 @@
 
 $img_url = get_stylesheet_directory_uri() . '/assets/img';
 $cart_count = WC()->cart->get_cart_contents_count();
+
 ?>
 
 <header class="header container">
   <a href="/" class="logo">
     <img src="<?= $img_url; ?>/handel.svg" alt="Logo Handel">
   </a>
-  
+
   <div class="busca">
     <form action="<?php bloginfo('url'); ?>/loja/" method="get">
       <input 
@@ -46,3 +47,11 @@ $cart_count = WC()->cart->get_cart_contents_count();
     </a>
   </nav>
 </header>
+
+<?php
+  wp_nav_menu([
+    'menu' => 'categorias',
+    'container' => 'nav',
+    'container_class' => 'menu-categorias'
+  ]);
+?>
