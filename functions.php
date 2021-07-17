@@ -26,5 +26,7 @@ function handel_loop_shop() {
 }
 add_filter('loop_shop_per_page', 'handel_loop_shop');
 
+// Habilitar suporte a Menus
+add_theme_support('menus');
 
 ?>
