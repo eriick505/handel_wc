@@ -184,3 +184,96 @@ img {
 .menu-categorias a:hover {
   color: orangered;
 }
+
+.vantagens {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 30px 0;
+}
+
+@media (max-width: 800px) {
+  .vantagens {
+    padding: 15px 0;
+  }
+}
+
+.vantagens li {
+  margin: 0 20px;
+  padding: 5px 0 5px 35px;
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+
+@media (max-width: 800px) {
+  .vantagens li {
+    margin: 0 8px;
+    padding: 5px 0 5px 28px;
+    font-size: 14px;
+  }
+}
+
+.vantagens li:nth-child(1) {
+  background-image: url("../../img/icons/frete.svg");
+}
+
+.vantagens li:nth-child(2) {
+  background-image: url("../../img/icons/troca.svg");
+}
+
+.vantagens li:nth-child(3) {
+  background-image: url("../../img/icons/card.svg");
+}
+
+.slide-item {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  background: var(--color-black);
+  color: var(--color-white);
+}
+
+@media (max-width: 800px) {
+  .slide-item {
+    grid-template-columns: 1fr;
+  }
+}
+
+.slide-item .slide-info {
+  padding: 0 20px 40px 20px;
+  align-self: end;
+}
+
+@media (max-width: 800px) {
+  .slide-item .slide-info {
+    padding: 20px 20px 30px 20px;
+  }
+}
+
+.slide-item .slide-preco {
+  display: block;
+  margin-bottom: 5px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.slide-item .slide-nome {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.slide-item .slide-link {
+  padding: 15px;
+  max-width: 200px;
+  background: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.slide-item .slide-link::after {
+  content: '';
+  display: block;
+  background: url("../../img/icons/arrow.svg") no-repeat center center;
+  width: 18px;
+  height: 18px;
+}
