@@ -65,24 +65,4 @@
     font-weight: 300;
     margin-bottom: 20px;
   }
-
-  .slide-link {
-    padding: 15px;
-    max-width: 200px;
-
-    background: var(--color-white);
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    &::after {
-      content: '';
-      display: block;
-
-      background: url('../../img/icons/arrow.svg') no-repeat center center;
-      width: 18px;
-      height: 18px;
-    }
-  }
 }
