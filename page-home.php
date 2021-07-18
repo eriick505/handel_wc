@@ -62,7 +62,7 @@ $data['vendidos'] = format_products($products_sales, 'medium');
         <div class="slide-info">
           <span class="slide-preco"><?= $product['price']; ?></span>
           <h2 class="slide-nome"><?= $product['name']; ?></h2>
-          <a class="slide-link" href="<?= $product['link']; ?>">Ver Produto</a>
+          <a class="btn-link" href="<?= $product['link']; ?>">Ver Produto</a>
         </div>
       </li>
     <?php } ?>
@@ -70,12 +70,12 @@ $data['vendidos'] = format_products($products_sales, 'medium');
 </section>
 
 <section class="container">
-  <h1 class="subtitulo">Lançamentos</h1>
+  <h1 class="titulo">Lançamentos</h1>
   <?php handel_product_list($data['lancamentos']); ?>
 </section>
 
 <section class="container">
-  <h1 class="subtitulo">Mais Vendidos</h1>
+  <h1 class="titulo">Mais Vendidos</h1>
   <?php handel_product_list($data['vendidos']); ?>
 </section>
 
