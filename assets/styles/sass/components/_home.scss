@@ -21,15 +21,15 @@
     }
 
     &:nth-child(1) {
-      background-image: url('../../img/icons/frete.svg');
+      background-image: url("../../img/icons/frete.svg");
     }
 
     &:nth-child(2) {
-      background-image: url('../../img/icons/troca.svg');
+      background-image: url("../../img/icons/troca.svg");
     }
 
     &:nth-child(3) {
-      background-image: url('../../img/icons/card.svg');
+      background-image: url("../../img/icons/card.svg");
     }
   }
 }
@@ -64,5 +64,48 @@
     font-size: 1.5rem;
     font-weight: 300;
     margin-bottom: 20px;
+  }
+}
+
+.categorias-home {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+
+  a {
+    display: grid;
+
+    &:nth-child(1) {
+      border-top: 10px solid var(--color-black);
+    }
+
+    &:nth-child(2) {
+      border-bottom: 10px solid var(--color-black);
+
+      span {
+        justify-self: start;
+        margin-left: 40px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  img {
+    grid-area: 1/1;
+  }
+
+  span {
+    grid-area: 1/1;
+    align-self: end;
+    justify-self: end;
+
+    margin-right: 40px;
+    margin-bottom: 40px;
+
+    width: 160px;
+
+    &:hover {
+      box-shadow: 3px 3px 7px 1px rgba(3, 3, 3, 0.2);
+    }
   }
 }
