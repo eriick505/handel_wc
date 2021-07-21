@@ -29,6 +29,23 @@ add_filter('loop_shop_per_page', 'handel_loop_shop');
 // Habilitar suporte a Menus
 add_theme_support('menus');
 
+// Função que formata os dados dos produtos 
+function format_products($products, $img_size = 'medium') {
+  $products_final = [];
+
+  foreach($products as $product) {
+    $products_final[] = [
+      'name' => $product->get_name(),
+      'price' => $product->get_price_html(),
+      'link' => $product->get_permalink(),
+      'img' => wp_get_attachment_image_src($product->get_image_id(), $img_size)[0],
+
+    ];
+  }
+
+  return $products_final;
+}
+
 // Função que cria o template de lista de produtos
 function handel_product_list($products)  { ?>
 	<ul class="products-list">
