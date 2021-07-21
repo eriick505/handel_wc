@@ -23,7 +23,7 @@ $cart_count = WC()->cart->get_cart_contents_count();
   </a>
 
   <div class="busca">
-    <form action="<?php bloginfo('url'); ?>/loja/" method="get">
+    <form action="<?php bloginfo('url'); ?>/loja/" method="get" id="searchForm">
       <input 
         type="text" 
         name="s" 
