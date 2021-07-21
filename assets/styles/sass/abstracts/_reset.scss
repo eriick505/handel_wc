@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 
 * {
   margin: 0;
@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 1.125rem;
 }
 
@@ -39,6 +39,7 @@ img {
 .container {
   max-width: 1000px;
   margin: 60px auto;
+  padding: 0 20px;
 }
 
 .hidden {
@@ -53,7 +54,7 @@ img {
 
   &::before,
   &::after {
-    content: '';
+    content: "";
     display: block;
 
     width: 100px;
@@ -84,10 +85,10 @@ img {
   justify-content: space-between;
 
   &::after {
-    content: '';
+    content: "";
     display: block;
 
-    background: url('../../img/icons/arrow.svg') no-repeat center center;
+    background: url("../../img/icons/arrow.svg") no-repeat center center;
     width: 18px;
     height: 18px;
   }

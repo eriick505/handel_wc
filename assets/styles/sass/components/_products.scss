@@ -3,6 +3,10 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
 
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+  }
+
   h2 {
     margin-top: 5px;
     font-size: 0.725rem;
