@@ -18,7 +18,7 @@ $cart_count = WC()->cart->get_cart_contents_count();
 ?>
 
 <header class="header container">
-  <a href="/" class="logo">
+  <a href="<?= get_site_url(); ?>" class="logo">
     <img src="<?= $img_url; ?>/handel.svg" alt="Logo Handel">
   </a>
 
@@ -37,8 +37,8 @@ $cart_count = WC()->cart->get_cart_contents_count();
   </div>
 
   <nav class="conta">
-    <a href="/minha-conta" class="minha-conta">Minha Conta</a>
-    <a href="/carrinho" class="carrinho">
+    <a href="<?php echo get_site_url(); ?>/minha-conta" class="minha-conta">Minha Conta</a>
+    <a href="<?php echo get_site_url(); ?>/carrinho" class="carrinho">
       Carrinho
 
       <?php if($cart_count) { ?>
