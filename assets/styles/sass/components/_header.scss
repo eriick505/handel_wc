@@ -26,6 +26,7 @@
 .busca {
   form {
     display: grid;
+    position: relative;
   }
 
   #s {
@@ -51,8 +52,25 @@
     width: 50px;
     cursor: pointer;
 
-    background: transparent url('../../img/icons/search.svg') no-repeat center
+    background: transparent url("../../img/icons/search.svg") no-repeat center
       center;
+  }
+
+  .boxWarning {
+    position: absolute;
+
+    left: 0;
+    bottom: -26px;
+
+    background-color: orangered;
+    color: var(--color-white);
+
+    padding: 8px;
+    border-radius: 4px;
+
+    z-index: 1;
+
+    font-size: 0.75rem;
   }
 }
 
@@ -74,11 +92,11 @@
   }
 
   .minha-conta {
-    background-image: url('../../img/icons/user.svg');
+    background-image: url("../../img/icons/user.svg");
   }
 
   .carrinho {
-    background-image: url('../../img/icons/cart.svg');
+    background-image: url("../../img/icons/cart.svg");
     position: relative;
 
     &-count {

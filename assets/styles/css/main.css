@@ -115,6 +115,7 @@ img {
 
 .busca form {
   display: grid;
+  position: relative;
 }
 
 .busca #s {
@@ -138,6 +139,18 @@ img {
   width: 50px;
   cursor: pointer;
   background: transparent url("../../img/icons/search.svg") no-repeat center center;
+}
+
+.busca .boxWarning {
+  position: absolute;
+  left: 0;
+  bottom: -26px;
+  background-color: orangered;
+  color: var(--color-white);
+  padding: 8px;
+  border-radius: 4px;
+  z-index: 1;
+  font-size: 0.75rem;
 }
 
 .conta {
