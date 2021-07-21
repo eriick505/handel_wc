@@ -440,6 +440,119 @@ img {
   color: var(--color-black);
 }
 
+@media (max-width: 800px) {
+  .filtros {
+    margin-top: 40px;
+    grid-row: 2;
+  }
+  .filtros::before {
+    content: "Filtrar Resultados";
+    display: block;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+  }
+}
+
+.filtro {
+  margin-bottom: 40px;
+}
+
+.filtro .widget {
+  margin-bottom: 40px;
+}
+
+.filtro .filtro-titulo,
+.filtro .widget h2 {
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.8);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.filtro .filtro-cat a {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.filtro .filtro-cat .current-menu-item > a {
+  color: orangered;
+}
+
+.filtro .filtro-cat .sub-menu {
+  margin-bottom: 20px;
+}
+
+.filtro .filtro-cat .sub-menu a::before {
+  content: "";
+  width: 10px;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.filtro .filtro-preco label {
+  width: 60px;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.filtro .filtro-preco input,
+.filtro .filtro-preco button {
+  font-size: 1rem;
+  width: 80px;
+  border: none;
+  border-radius: 4px;
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.filtro .filtro-preco button {
+  width: 144px;
+  height: 35px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.filtro .woocommerce
+.woocommerce-widget-layered-nav-list
+.woocommerce-widget-layered-nav-list__item
+a::before {
+  content: "";
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  background-color: transparent;
+  border: 2px solid #000;
+  margin-right: 8px;
+}
+
+.filtro .woocommerce
+.woocommerce-widget-layered-nav-list
+.woocommerce-widget-layered-nav-list__item--chosen
+a::before {
+  background-color: orangered;
+}
+
+.filtro .woocommerce .woocommerce-widget-layered-nav-list .count {
+  display: none;
+}
+
+.woocommerce-ordering {
+  margin-bottom: 20px;
+  margin-left: auto;
+  float: none !important;
+}
+
+.woocommerce-ordering select {
+  font-size: 1rem;
+  padding: 5px 2px;
+}
+
 .footer {
   background-color: var(--color-black);
   color: var(--color-white);
