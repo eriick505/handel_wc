@@ -62,6 +62,10 @@
   border-left: 4px solid olivedrab;
 }
 
+.woocommerce-message a.button {
+  color: var(--color-white);
+}
+
 .woocommerce-error {
   border-left: 4px solid orangered;
 }
@@ -71,6 +75,8 @@
 .woocommerce-error::before {
   color: var(--color-white);
 }
+
+// Cart Page
 
 .woocommerce-cart {
   a.button.alt {
@@ -90,4 +96,84 @@
     font-size: 1.125rem;
     text-transform: uppercase;
   }
+}
+
+// Checkout Page
+.woocommerce-checkout {
+  .checkout_coupon {
+    @media (max-width: 800px) {
+      .form-row {
+        width: 100%;
+      }
+    }
+  }
+
+  .checkout {
+    h3 {
+      font-size: 1rem;
+      font-weight: 400;
+      text-transform: uppercase;
+
+      border-radius: 4px;
+      margin-bottom: 10px;
+      padding: 15px;
+
+      background-color: #111;
+      color: var(--color-white);
+    }
+
+    @media (max-width: 800px) {
+      #ship-to-different-address,
+      #order_review_heading {
+        margin-top: 30px;
+      }
+    }
+
+    #ship-to-different-address {
+      float: none !important;
+    }
+
+    #payment,
+    #payment div.payment_box {
+      background-color: rgba(0, 0, 0, 0.08);
+      color: var(--color-black);
+
+      font-size: 1rem;
+    }
+
+    #payment #place_order {
+      float: none;
+
+      margin-top: 20px;
+      padding: 15px 30px;
+
+      font-size: 1.25rem;
+
+      background-color: #0066bb !important;
+
+      &:hover {
+        background-color: #1188ee !important;
+      }
+    }
+  }
+}
+
+// My Account Page
+.woocommerce form.checkout_coupon,
+.woocommerce form.login,
+.woocommerce form.register {
+  border: none;
+  padding: 0px;
+  margin: 10px 0;
+
+  max-width: 600px;
+}
+
+// Pagseguro
+.woocommerce #pagseguro-payment-form {
+  border: none;
+}
+
+.woocommerce #payment div.payment_box ::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.4);
 }

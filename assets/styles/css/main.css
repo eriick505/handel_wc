@@ -772,6 +772,10 @@ a::before {
   border-left: 4px solid olivedrab;
 }
 
+.woocommerce-message a.button {
+  color: var(--color-white);
+}
+
 .woocommerce-error {
   border-left: 4px solid orangered;
 }
@@ -796,6 +800,70 @@ a::before {
   margin-bottom: 10px;
   font-size: 1.125rem;
   text-transform: uppercase;
+}
+
+@media (max-width: 800px) {
+  .woocommerce-checkout .checkout_coupon .form-row {
+    width: 100%;
+  }
+}
+
+.woocommerce-checkout .checkout h3 {
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  padding: 15px;
+  background-color: #111;
+  color: var(--color-white);
+}
+
+@media (max-width: 800px) {
+  .woocommerce-checkout .checkout #ship-to-different-address,
+  .woocommerce-checkout .checkout #order_review_heading {
+    margin-top: 30px;
+  }
+}
+
+.woocommerce-checkout .checkout #ship-to-different-address {
+  float: none !important;
+}
+
+.woocommerce-checkout .checkout #payment,
+.woocommerce-checkout .checkout #payment div.payment_box {
+  background-color: rgba(0, 0, 0, 0.08);
+  color: var(--color-black);
+  font-size: 1rem;
+}
+
+.woocommerce-checkout .checkout #payment #place_order {
+  float: none;
+  margin-top: 20px;
+  padding: 15px 30px;
+  font-size: 1.25rem;
+  background-color: #0066bb !important;
+}
+
+.woocommerce-checkout .checkout #payment #place_order:hover {
+  background-color: #1188ee !important;
+}
+
+.woocommerce form.checkout_coupon,
+.woocommerce form.login,
+.woocommerce form.register {
+  border: none;
+  padding: 0px;
+  margin: 10px 0;
+  max-width: 600px;
+}
+
+.woocommerce #pagseguro-payment-form {
+  border: none;
+}
+
+.woocommerce #payment div.payment_box ::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.4);
 }
 
 .footer {
