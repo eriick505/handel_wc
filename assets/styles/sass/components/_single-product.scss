@@ -1,0 +1,143 @@
+.produto-detalhe {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 20px;
+
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr;
+
+    .product-gallery {
+      grid-row: 2;
+    }
+  }
+
+  .product-gallery {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 20px;
+
+    @media (max-width: 800px) {
+      grid-template-columns: 1fr;
+
+      &-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+      }
+    }
+
+    &-list img {
+      margin-bottom: 20px;
+    }
+  }
+
+  .produto-infos {
+    small {
+      display: block;
+
+      color: rgba(0, 0, 0, 0.5);
+
+      font-size: 0.75rem;
+      text-transform: uppercase;
+
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 700;
+
+      margin-bottom: 40px;
+
+      @media (max-width: 800px) {
+        margin-bottom: 20px;
+      }
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 400;
+
+      margin-bottom: 10px;
+    }
+
+    .preco {
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+
+    .button {
+      background-color: var(--color-black);
+      color: var(--color-white);
+
+      border: none;
+      margin-top: 20px;
+      margin-bottom: 40px;
+      padding: 12px 15px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      min-width: 200px;
+
+      font-size: 1rem;
+
+      cursor: pointer;
+
+      &.disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+
+        background: url("../../img/icons/add.svg") no-repeat center center;
+
+        width: 16px;
+        height: 16px;
+
+        transition: 0.3s;
+      }
+
+      &:hover::after {
+        transform: rotate(180deg);
+      }
+    }
+
+    .variations {
+      tr {
+        display: flex;
+        flex-direction: column;
+
+        margin-bottom: 10px;
+      }
+
+      select {
+        font-size: 1rem;
+        padding: 4px;
+      }
+
+      .reset_variations {
+        display: none !important;
+      }
+    }
+
+    .stock {
+      margin-bottom: 10px;
+    }
+
+    .woocommerce-variation-price {
+      color: orangered;
+      font-weight: bold;
+    }
+
+    .quantity input {
+      padding: 4px;
+
+      max-width: 50px;
+    }
+  }
+}
