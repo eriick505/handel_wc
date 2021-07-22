@@ -61,10 +61,10 @@ function format_single_product($id, $img_size = 'medium') {
     </div>
   </div>
 
-  <div class="produto-info">
+  <div class="produto-infos">
     <small><?= $product_formated['sku']; ?></small>
     <h1><?= $product_formated['name']; ?></h1>
-    <p class="preco"><?= $product_formated['price']; ?></p>
+    <p class="preco">R$<?= $product_formated['price']; ?></p>
     <?php woocommerce_template_single_add_to_cart(); ?>
     <h2>Descrição</h2>
     <p><?= $product_formated['description']; ?></p>
