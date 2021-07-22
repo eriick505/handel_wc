@@ -2,8 +2,10 @@
 
 <?php if(have_posts()) { while(have_posts()) { the_post(); ?>
 
-<h1><?php the_title(); ?></h1>
-<p><?php the_content(); ?></p>
+  <h1 class="titulo-index"><?php the_title(); ?></h1>
+  <main class="container container-index">
+    <?php the_content(); ?>
+  </main>
 
 <?php } } ?>
 
