@@ -773,6 +773,7 @@ a::before {
 }
 
 .woocommerce-message a.button {
+  background-color: var(--color-black);
   color: var(--color-white);
 }
 
@@ -858,12 +859,118 @@ a::before {
   max-width: 600px;
 }
 
+.woocommerce-account h2 {
+  font-size: 1.125rem;
+}
+
+.woocommerce-account.logged-in .woocommerce {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 30px;
+}
+
+@media (max-width: 800px) {
+  .woocommerce-account.logged-in .woocommerce {
+    grid-template-columns: 1fr;
+  }
+}
+
+.woocommerce-account.logged-in .woocommerce::before, .woocommerce-account.logged-in .woocommerce::after {
+  display: none;
+}
+
+.woocommerce-account.logged-in .woocommerce .woocommerce-MyAccount-navigation,
+.woocommerce-account.logged-in .woocommerce .woocommerce-MyAccount-content {
+  width: auto;
+  float: none;
+}
+
+.woocommerce-account.logged-in .woocommerce .woocommerce-MyAccount-navigation ul {
+  background-color: var(--color-black);
+}
+
+.woocommerce-account.logged-in .woocommerce .woocommerce-MyAccount-navigation .is-active a {
+  background-color: orangered;
+}
+
+.woocommerce-account.logged-in .woocommerce .woocommerce-MyAccount-navigation a {
+  color: var(--color-white);
+  display: block;
+  padding: 10px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+  text-decoration: none;
+}
+
+.woocommerce-account.logged-in .woocommerce .woocommerce-MyAccount-navigation a:hover {
+  background-color: orangered;
+}
+
+.woocommerce-account.logged-in .woocommerce .woocommerce-MyAccount-content p {
+  margin-bottom: 1rem;
+}
+
+.woocommerce-account.logged-in .woocommerce .woocommerce-MyAccount-content button {
+  margin-top: 15px !important;
+}
+
+.woocommerce-account.logged-in .woocommerce .woocommerce-MyAccount-content address {
+  border-width: 1px;
+  border-radius: 0;
+}
+
+.woocommerce-account.logged-in .woocommerce .woocommerce-MyAccount-content fieldset {
+  border: none;
+}
+
 .woocommerce #pagseguro-payment-form {
   border: none;
 }
 
 .woocommerce #payment div.payment_box ::-webkit-input-placeholder {
   color: rgba(0, 0, 0, 0.4);
+}
+
+.menuCart {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  max-width: 300px;
+  padding: 1rem;
+  background-color: var(--color-white);
+  box-shadow: 5px 0 7px 1px rgba(0, 0, 0, 0.18);
+  z-index: 100;
+  opacity: 0;
+  transform: translateX(-300px);
+}
+
+.menuCart.active {
+  animation: showFadeLeft 0.4s forwards;
+}
+
+.menuCart .close {
+  margin-left: auto;
+  margin-bottom: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 2.4rem;
+  background-color: transparent;
+  color: orangered;
+  border: none;
+  cursor: pointer;
+}
+
+.menuCart .close:hover {
+  color: var(--color-black);
+}
+
+@keyframes showFadeLeft {
+  to {
+    opacity: 1;
+    transform: initial;
+  }
 }
 
 .footer {
