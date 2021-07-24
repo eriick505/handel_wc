@@ -13,7 +13,10 @@
 <?php 
 
 $img_url = get_stylesheet_directory_uri() . '/assets/img';
-$cart_count = WC()->cart->get_cart_contents_count();
+
+$cart_data = WC()->cart;
+$cart_subtotal = $cart_data->get_subtotal();
+$cart_count = $cart_data->get_cart_contents_count();
 
 ?>
 
@@ -38,6 +41,11 @@ $cart_count = WC()->cart->get_cart_contents_count();
 
   <nav class="conta">
     <a href="<?php echo get_site_url(); ?>/minha-conta" class="minha-conta">Minha Conta</a>
+
+    <!-- <button id="btnOpenMenuCart">
+      Carrinho
+    </button> -->
+    
     <a href="<?php echo get_site_url(); ?>/carrinho" class="carrinho">
       Carrinho
 
@@ -55,3 +63,11 @@ $cart_count = WC()->cart->get_cart_contents_count();
     'container_class' => 'menu-categorias'
   ]);
 ?>
+
+<div class="menuCart">
+  <button class="close">
+    &times;
+  </button>
+
+  <?php dynamic_sidebar('Carrinho'); ?>
+</div>
