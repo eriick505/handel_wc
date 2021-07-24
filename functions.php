@@ -44,17 +44,41 @@ add_filter('loop_shop_per_page', 'handel_loop_shop');
 // Habilitar suporte a Menus
 add_theme_support('menus');
 
+ // Habilitar suporte a Widgets no menu aparência
+ add_theme_support('widgets');
+//  add_theme_support('customize-selective-refresh-widgets');
+add_filter( 'use_widgets_block_editor', '__return_false' );
+
+// Função para criar multiplos Widgets 
+function widget_registration($name, $id, $beforeWidget, $afterWidget, $beforeTitle, $afterTitle) {
+  register_sidebar( array(
+      'name' => $name,
+      'id' => $id,
+      'before_widget' => $beforeWidget,
+      'after_widget' => $afterWidget,
+      'before_title' => $beforeTitle,
+      'after_title' => $afterTitle,
+  ));
+}
+
+function multiple_widget_init(){
+  widget_registration('Carrinho', 'sidebar', '<div>', '</div>', '<h5>', '</h5>');
+}
+
+add_action('widgets_init', 'multiple_widget_init');
+
+
 // Função que formata os dados dos produtos 
 function format_products($products, $img_size = 'medium') {
   $products_final = [];
 
   foreach($products as $product) {
     $products_final[] = [
+      'id' => $product->get_id(),
       'name' => $product->get_name(),
       'price' => $product->get_price_html(),
       'link' => $product->get_permalink(),
       'img' => wp_get_attachment_image_src($product->get_image_id(), $img_size)[0],
-
     ];
   }
 
@@ -82,3 +106,10 @@ function handel_product_list($products)  { ?>
 } // fecha a função handel_product_list
 
 ?>
+
+
+
+
+
+
+
