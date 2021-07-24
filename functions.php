@@ -68,10 +68,11 @@ function multiple_widget_init(){
 add_action('widgets_init', 'multiple_widget_init');
 
 
-// Função para formatação dos dados do produto e template de lista de produto
 include(get_template_directory() . '/inc/format-product.php');
 
 include(get_template_directory() . '/inc/user-custom-menu.php');
+
+include(get_template_directory() . '/inc/custom-checkout.php');
 
 ?>
 
