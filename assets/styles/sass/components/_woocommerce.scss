@@ -63,6 +63,7 @@
 }
 
 .woocommerce-message a.button {
+  background-color: var(--color-black);
   color: var(--color-white);
 }
 
@@ -167,6 +168,77 @@
   margin: 10px 0;
 
   max-width: 600px;
+}
+
+.woocommerce-account {
+  h2 {
+    font-size: 1.125rem;
+  }
+
+  &.logged-in .woocommerce {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 30px;
+
+    @media (max-width: 800px) {
+      grid-template-columns: 1fr;
+    }
+
+    &::before,
+    &::after {
+      display: none;
+    }
+
+    .woocommerce-MyAccount-navigation,
+    .woocommerce-MyAccount-content {
+      width: auto;
+      float: none;
+    }
+
+    .woocommerce-MyAccount-navigation {
+      ul {
+        background-color: var(--color-black);
+      }
+
+      .is-active a {
+        background-color: orangered;
+      }
+
+      a {
+        color: var(--color-white);
+
+        display: block;
+
+        padding: 10px;
+        border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+
+        text-decoration: none;
+
+        &:hover {
+          background-color: orangered;
+        }
+      }
+    }
+
+    .woocommerce-MyAccount-content {
+      p {
+        margin-bottom: 1rem;
+      }
+
+      button {
+        margin-top: 15px !important;
+      }
+
+      address {
+        border-width: 1px;
+        border-radius: 0;
+      }
+
+      fieldset {
+        border: none;
+      }
+    }
+  }
 }
 
 // Pagseguro
