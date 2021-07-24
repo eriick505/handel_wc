@@ -820,6 +820,10 @@ a::before {
   color: var(--color-white);
 }
 
+.woocommerce-checkout .checkout #order_review_heading {
+  margin-top: 30px;
+}
+
 @media (max-width: 800px) {
   .woocommerce-checkout .checkout #ship-to-different-address,
   .woocommerce-checkout .checkout #order_review_heading {

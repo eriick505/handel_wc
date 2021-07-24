@@ -123,6 +123,10 @@
       color: var(--color-white);
     }
 
+    #order_review_heading {
+      margin-top: 30px;
+    }
+
     @media (max-width: 800px) {
       #ship-to-different-address,
       #order_review_heading {
