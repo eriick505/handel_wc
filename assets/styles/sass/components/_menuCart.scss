@@ -1,0 +1,53 @@
+.menuCart {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  height: 100vh;
+  max-width: 300px;
+
+  padding: 1rem;
+
+  background-color: var(--color-white);
+
+  box-shadow: 5px 0 7px 1px rgba(0, 0, 0, 0.18);
+  z-index: 100;
+
+  opacity: 0;
+  transform: translateX(-300px);
+
+  &.active {
+    animation: showFadeLeft 0.4s forwards;
+  }
+
+  .close {
+    margin-left: auto;
+    margin-bottom: 14px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    font-size: 2.4rem;
+
+    background-color: transparent;
+    color: orangered;
+
+    border: none;
+
+    cursor: pointer;
+
+    &:hover {
+      color: var(--color-black);
+    }
+  }
+}
+
+@keyframes showFadeLeft {
+  to {
+    opacity: 1;
+    transform: initial;
+  }
+}
