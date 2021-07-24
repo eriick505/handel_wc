@@ -54,6 +54,37 @@ function initHandleGalleryProduct() {
   });
 }
 
+function initHandleCanvasCartMenu() {
+  const btnOpenCartMenu = document.querySelector("#btnOpenMenuCart");
+  const menuCartEl = document.querySelector(".menuCart");
+  const btnCloseInsideMenu = menuCartEl.querySelector(".close");
+
+  const toggleClassAndAnimation = () => {
+    if (!menuCartEl.classList.contains("active")) {
+      menuCartEl.classList.add("active");
+      return;
+    }
+
+    const animationOutside = menuCartEl.animate(
+      {
+        transform: "translateX(-300px)",
+        opacity: 0,
+      },
+      {
+        duration: 400,
+      }
+    );
+
+    animationOutside.onfinish = () => {
+      menuCartEl.classList.remove("active");
+    };
+  };
+
+  btnOpenCartMenu.addEventListener("click", toggleClassAndAnimation);
+  btnCloseInsideMenu.addEventListener("click", toggleClassAndAnimation);
+}
+
 slide.init();
 initHandleSearchInputSubmit();
 initHandleGalleryProduct();
+initHandleCanvasCartMenu();
