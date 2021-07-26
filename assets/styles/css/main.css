@@ -709,6 +709,10 @@ a::before {
   display: none;
 }
 
+.filtro .woocommerce a {
+  text-decoration: none;
+}
+
 .woocommerce-ordering {
   margin-bottom: 20px;
   margin-left: auto;
@@ -932,6 +936,54 @@ a::before {
 
 .woocommerce #payment div.payment_box ::-webkit-input-placeholder {
   color: rgba(0, 0, 0, 0.4);
+}
+
+.woocommerce-order-received h2 {
+  font-size: 1.25rem;
+  margin: 10px 0;
+}
+
+.woocommerce-order-received .woocommerce-thankyou-order-received {
+  background-color: #0066bb;
+  color: #fff;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
+.woocommerce-order-received ul.order_details {
+  background-color: #eee;
+  padding: 15px;
+  margin-bottom: 30px;
+}
+
+.woocommerce-order-received ul.order_details li {
+  margin: 10px;
+}
+
+.woocommerce-order-received ul.order_details li strong {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.woocommerce-order-received ul.order_details + p {
+  margin-bottom: 30px;
+}
+
+.woocommerce-order-received .woocommerce-columns--addresses address {
+  line-height: 26px;
+}
+
+.woocommerce-page .woocommerce-message .button {
+  font-weight: normal;
+  color: var(--color-white);
+  background-color: #0066bb;
+}
+
+.woocommerce-page .woocommerce-message .button:hover {
+  color: var(--color-white);
+  background-color: #1188ee;
 }
 
 .menuCart {

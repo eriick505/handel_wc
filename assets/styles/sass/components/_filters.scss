@@ -118,6 +118,10 @@
   .woocommerce .woocommerce-widget-layered-nav-list .count {
     display: none;
   }
+
+  .woocommerce a {
+    text-decoration: none;
+  }
 }
 
 .woocommerce-ordering {
