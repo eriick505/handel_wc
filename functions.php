@@ -74,6 +74,18 @@ include(get_template_directory() . '/inc/user-custom-menu.php');
 
 include(get_template_directory() . '/inc/custom-checkout.php');
 
+// Adiciona os campos customizados do checkout no corpo do email 
+function handel_add_email_meta($order) {
+  $mensagem = get_post_meta($order->get_id(), 'mensagem_personalizada', true);
+  $presente = get_post_meta($order->get_id(), '_billing_presente', true);
+
+  echo '<h2 style="margin: -20px 0 10px 0px">Detalhes</h2>
+    <p style="font-size: 16px; border: 1px solid #e5e5e5; padding: 10px; margin-bottom: 0px;"><strong>Mensagem: </strong>' . $mensagem . '</p>
+    <p style="font-size: 16px; border: 1px solid #e5e5e5; padding: 10px;"><strong>Presente: </strong>' . $presente . '</p>
+  ';
+}
+add_action('woocommerce_email_order_meta', 'handel_add_email_meta');
+
 ?>
 
 
